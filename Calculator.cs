@@ -247,5 +247,25 @@ namespace calculator_windows_form
                     }
             }
         }
+
+        private void btnminusplus_Click(object sender, EventArgs e)
+        {
+            if (txtdisplay.Text.Contains("-"))
+            {
+                txtdisplay.Text = txtdisplay.Text.Trim('-');
+            }
+            else
+            {
+                txtdisplay.Text = "-" + txtdisplay.Text;
+            }
+        }
+
+        private void btnclr_Click(object sender, EventArgs e)
+        {
+            num1 = 0.0m;
+            num2 = 0.0m;
+            txtdisplay.Text = "0";
+            txtdisplay.Text = "0";
+        }
     }
 }

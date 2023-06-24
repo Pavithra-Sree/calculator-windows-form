@@ -30,6 +30,8 @@
         {
             btn7 = new Button();
             grpcalc = new GroupBox();
+            btnclr = new Button();
+            btnminusplus = new Button();
             txtdisplay = new TextBox();
             btndot = new Button();
             btnequal = new Button();
@@ -63,6 +65,8 @@
             // grpcalc
             // 
             grpcalc.BackColor = SystemColors.GradientActiveCaption;
+            grpcalc.Controls.Add(btnclr);
+            grpcalc.Controls.Add(btnminusplus);
             grpcalc.Controls.Add(txtdisplay);
             grpcalc.Controls.Add(btndot);
             grpcalc.Controls.Add(btnequal);
@@ -88,6 +92,26 @@
             grpcalc.TabStop = false;
             grpcalc.Text = "Calculator";
             grpcalc.Enter += grpcalc_Enter;
+            // 
+            // btnclr
+            // 
+            btnclr.Location = new Point(359, 117);
+            btnclr.Name = "btnclr";
+            btnclr.Size = new Size(83, 71);
+            btnclr.TabIndex = 19;
+            btnclr.Text = "c";
+            btnclr.UseVisualStyleBackColor = true;
+            btnclr.Click += btnclr_Click;
+            // 
+            // btnminusplus
+            // 
+            btnminusplus.Location = new Point(35, 473);
+            btnminusplus.Name = "btnminusplus";
+            btnminusplus.Size = new Size(83, 71);
+            btnminusplus.TabIndex = 18;
+            btnminusplus.Text = "+/-";
+            btnminusplus.UseVisualStyleBackColor = true;
+            btnminusplus.Click += btnminusplus_Click;
             // 
             // txtdisplay
             // 
@@ -139,9 +163,9 @@
             // 
             // btnzero
             // 
-            btnzero.Location = new Point(35, 473);
+            btnzero.Location = new Point(147, 473);
             btnzero.Name = "btnzero";
-            btnzero.Size = new Size(195, 71);
+            btnzero.Size = new Size(83, 71);
             btnzero.TabIndex = 12;
             btnzero.Text = "0";
             btnzero.UseVisualStyleBackColor = true;
@@ -189,9 +213,9 @@
             // 
             // btnplus
             // 
-            btnplus.Location = new Point(359, 209);
+            btnplus.Location = new Point(359, 296);
             btnplus.Name = "btnplus";
-            btnplus.Size = new Size(83, 152);
+            btnplus.Size = new Size(83, 65);
             btnplus.TabIndex = 8;
             btnplus.Text = "+";
             btnplus.UseVisualStyleBackColor = true;
@@ -229,7 +253,7 @@
             // 
             // btnminus
             // 
-            btnminus.Location = new Point(359, 117);
+            btnminus.Location = new Point(359, 209);
             btnminus.Name = "btnminus";
             btnminus.Size = new Size(83, 62);
             btnminus.TabIndex = 4;
@@ -292,5 +316,7 @@
         private Button btn8;
         private Button btndot;
         private TextBox txtdisplay;
+        private Button btnclr;
+        private Button btnminusplus;
     }
 }
