@@ -52,7 +52,7 @@ namespace calculator_windows_form
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "1")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "1";
             }
@@ -64,7 +64,7 @@ namespace calculator_windows_form
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "2")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "2";
             }
@@ -76,7 +76,7 @@ namespace calculator_windows_form
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "3")
+            if (txtdisplay.Text == "")
             {
                 txtdisplay.Text = "3";
             }
@@ -88,7 +88,7 @@ namespace calculator_windows_form
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "4")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "4";
             }
@@ -100,7 +100,7 @@ namespace calculator_windows_form
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "5")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "5";
             }
@@ -112,7 +112,7 @@ namespace calculator_windows_form
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "6")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "6";
             }
@@ -124,7 +124,7 @@ namespace calculator_windows_form
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "7")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "7";
             }
@@ -136,7 +136,7 @@ namespace calculator_windows_form
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "8")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "8";
             }
@@ -148,13 +148,103 @@ namespace calculator_windows_form
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (txtdisplay.Text == "9")
+            if (txtdisplay.Text == "0")
             {
                 txtdisplay.Text = "9";
             }
             else
             {
                 txtdisplay.Text += "9";
+            }
+        }
+
+        private void btndot_Click(object sender, EventArgs e)
+        {
+            if (!txtdisplay.Text.Contains("."))
+            {
+                txtdisplay.Text += ".";
+            }
+        }
+
+        private void btnminus_Click(object sender, EventArgs e)
+        {
+            num1 = decimal.Parse(txtdisplay.Text);
+            txtdisplay.Clear();
+            symbol = "-";
+        }
+
+        private void btnplus_Click(object sender, EventArgs e)
+        {
+            num1 = decimal.Parse(txtdisplay.Text);
+            txtdisplay.Clear();
+            symbol = "+";
+        }
+
+        private void btnmultiply_Click(object sender, EventArgs e)
+        {
+            num1 = decimal.Parse(txtdisplay.Text);
+            txtdisplay.Clear();
+            symbol = "*";
+        }
+
+        private void btndivision_Click(object sender, EventArgs e)
+        {
+            num1 = decimal.Parse(txtdisplay.Text);
+            txtdisplay.Clear();
+            symbol = "/";
+        }
+
+        private void btnmodulo_Click(object sender, EventArgs e)
+        {
+            num1 = decimal.Parse(txtdisplay.Text);
+            txtdisplay.Clear();
+            symbol = "%";
+        }
+
+
+        private void btnequal_Click(object sender, EventArgs e)
+        {
+            switch (symbol)
+            {
+                case "-":
+                    {
+                        num2 = decimal.Parse(txtdisplay.Text);
+                        Result = num1 - num2;
+                        txtdisplay.Text = Result.ToString();
+                        break;
+                    }
+                case "+":
+                    {
+
+                        num2 = decimal.Parse(txtdisplay.Text);
+                        Result = num1 + num2;
+                        txtdisplay.Text = Result.ToString();
+                        break;
+                    }
+                case "*":
+                    {
+
+                        num2 = decimal.Parse(txtdisplay.Text);
+                        Result = num1 * num2;
+                        txtdisplay.Text = Result.ToString();
+                        break;
+                    }
+                case "/":
+                    {
+
+                        num2 = decimal.Parse(txtdisplay.Text);
+                        Result = num1 / num2;
+                        txtdisplay.Text = Result.ToString();
+                        break;
+                    }
+                case "%":
+                    {
+
+                        num2 = decimal.Parse(txtdisplay.Text);
+                        Result = num1 % num2;
+                        txtdisplay.Text = Result.ToString();
+                        break;
+                    }
             }
         }
     }

@@ -105,6 +105,7 @@
             btndot.TabIndex = 17;
             btndot.Text = ".";
             btndot.UseVisualStyleBackColor = true;
+            btndot.Click += btndot_Click;
             // 
             // btnequal
             // 
@@ -114,6 +115,7 @@
             btnequal.TabIndex = 16;
             btnequal.Text = "=";
             btnequal.UseVisualStyleBackColor = true;
+            btnequal.Click += btnequal_Click;
             // 
             // btn3
             // 
@@ -193,6 +195,7 @@
             btnplus.TabIndex = 8;
             btnplus.Text = "+";
             btnplus.UseVisualStyleBackColor = true;
+            btnplus.Click += btnplus_Click;
             // 
             // btndivision
             // 
@@ -202,6 +205,7 @@
             btndivision.TabIndex = 7;
             btndivision.Text = "/";
             btndivision.UseVisualStyleBackColor = true;
+            btndivision.Click += btndivision_Click;
             // 
             // btnmodulo
             // 
@@ -211,6 +215,7 @@
             btnmodulo.TabIndex = 6;
             btnmodulo.Text = "%";
             btnmodulo.UseVisualStyleBackColor = true;
+            btnmodulo.Click += btnmodulo_Click;
             // 
             // btnmultiply
             // 
@@ -220,6 +225,7 @@
             btnmultiply.TabIndex = 5;
             btnmultiply.Text = "*";
             btnmultiply.UseVisualStyleBackColor = true;
+            btnmultiply.Click += btnmultiply_Click;
             // 
             // btnminus
             // 
@@ -229,6 +235,7 @@
             btnminus.TabIndex = 4;
             btnminus.Text = "-";
             btnminus.UseVisualStyleBackColor = true;
+            btnminus.Click += btnminus_Click;
             // 
             // btn9
             // 
